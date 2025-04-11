@@ -22,12 +22,14 @@ echo '<?php phpinfo(); ?>' > /var/www/html/info.php
 vim sites-available/default
 
 server {
+        # 8080 포트로 변경
         listen 8080 default_server;
         listen [::]:8080 default_server;
 
         ...
         ...
 
+        # 추가
         location ~ \.php$ {
               include snippets/fastcgi-php.conf;
               fastcgi_pass unix:/run/php/php8.3-fpm.sock;
