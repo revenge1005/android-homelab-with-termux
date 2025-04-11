@@ -12,5 +12,5 @@
 - [02. SSH 설치](https://github.com/revenge1005/android-homelab-with-termux/tree/main/02.%20SSH)
 - [03. Ubuntu 설치](https://github.com/revenge1005/android-homelab-with-termux/tree/main/03.%20ubuntu-install)
 - [04. Nginx + PHP 설치](https://github.com/revenge1005/android-homelab-with-termux/tree/main/04.%20Nginx%20%2B%20PHP%20Install)
-- [05. ]()
+- [05. Mariadb 설치]()
 - [06. ]()
