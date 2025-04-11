@@ -30,5 +30,5 @@ whoami
 passwd
 ```
 
-![02-1]()
-![02-2]()
+![02-1](https://github.com/revenge1005/android-homelab-with-termux/blob/main/02.%20SSH/01.png)
+![02-2](https://github.com/revenge1005/android-homelab-with-termux/blob/main/02.%20SSH/02.png)
