@@ -27,4 +27,4 @@ proot-distro install ubuntu
 proot-distro login ubuntu
 ```
 
-![03-2](https://github.com/revenge1005/android-homelab-with-termux/blob/main/03.%20ubuntu-install/03-2.png)
+![03-2](https://github.com/revenge1005/android-homelab-with-termux/blob/main/03.%20ubuntu-install/03-2.PNG)
