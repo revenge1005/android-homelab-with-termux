@@ -26,6 +26,8 @@ mysql -u root
 ```bash
 FLUSH PRIVILEGES;
 ALTER USER 'root'@'localhost' IDENTIFIED BY '새_비밀번호';
+# 외부 접속 허용
+GRANT ALL PRIVILEGES ON *.* TO 'root'@'%' IDENTIFIED BY '패스워드';
 EXIT;
 ```
 
@@ -45,6 +47,18 @@ kill -9 <PID>
 mysqld -u -root&
 
 mysql -u root -p
+```
+
+### 5. Termux 실행 시 자동으로 MariaDB 실행되도록 하기
+
+```bash
+vim .bashrc
+
+if ! ps -e |grep "mysql" > /dev/null;
+then
+	echo "starting mariadb"
+	mysqld -u -root&
+fi
 ```
 
 ![05-1](https://github.com/revenge1005/android-homelab-with-termux/blob/main/05.%20mariadb%20install/05-1.PNG)
