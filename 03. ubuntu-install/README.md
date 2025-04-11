@@ -28,3 +28,9 @@ proot-distro login ubuntu
 ```
 
 ![03-2](https://github.com/revenge1005/android-homelab-with-termux/blob/main/03.%20ubuntu-install/03-2.PNG)
+
+## Acquire wakelock 설정
+
+앱이 절정모드로 진입하는 것을 막기 위해 상태바에서 'Acquire wakelock'를 설정
+
+![03-3](https://github.com/revenge1005/android-homelab-with-termux/blob/main/03.%20ubuntu-install/03-3.png)
