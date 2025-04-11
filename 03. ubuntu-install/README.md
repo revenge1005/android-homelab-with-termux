@@ -18,7 +18,7 @@ proot-distro list
 proot-distro install ubuntu
 ```
 
-![03-1]()
+![03-1](https://github.com/revenge1005/android-homelab-with-termux/blob/main/03.%20ubuntu-install/03-1.png)
 
 ## Ubuntu 로그인
 
@@ -27,4 +27,4 @@ proot-distro install ubuntu
 proot-distro login ubuntu
 ```
 
-![03-2]()
+![03-2](https://github.com/revenge1005/android-homelab-with-termux/blob/main/03.%20ubuntu-install/03-2.png)
