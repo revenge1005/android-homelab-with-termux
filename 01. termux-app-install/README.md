@@ -7,4 +7,4 @@
 
 ## Termux-app 실행
 
-![01-2](/01. termux-app-install/02.png)
+![01-2](https://github.com/revenge1005/android-homelab-with-termux/blob/main/01.%20termux-app-install/02.png)
