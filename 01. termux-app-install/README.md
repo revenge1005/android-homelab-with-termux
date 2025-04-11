@@ -3,4 +3,8 @@
 - [설치 링크](https://github.com/termux/termux-app/releases)
 - 스마트폰마다 아키텍처?가 다르기 때문에 어떤 것을 받으라고 하기가 애매하다. 내 기준에서는 ~armeabi-v7a.apk으로 설치하였다.
 
-![01](https://github.com/revenge1005/android-homelab-with-termux/blob/main/01.%20termux-app-install/01.PNG)
+![01-1](https://github.com/revenge1005/android-homelab-with-termux/blob/main/01.%20termux-app-install/01.PNG)
+
+## Termux-app 실행
+
+![01-2](/01. termux-app-install/02.png)
