@@ -42,4 +42,4 @@ nginx
 /usr/sbin/php-fpm8.3 -D
 ```
 
-![04-1](https://github.com/revenge1005/android-homelab-with-termux/blob/main/03.%20ubuntu-install/04-1.png)
+![04-1](https://github.com/revenge1005/android-homelab-with-termux/blob/main/04.%20Nginx%20%2B%20PHP%20Install/04-1.png)
