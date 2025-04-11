@@ -8,7 +8,7 @@
 - **액세서리**: OTG 어댑터 또는 USB-C 허브 (HDD 연결용).
 
 # 목차
-- [01. Termux-app 설치]()
+- [01. Termux-app 설치](https://github.com/revenge1005/android-homelab-with-termux/tree/main/01.%20termux-app-install)
 - [02. SSH 설치]()
 - [03. ]()
 - [04. ]()
