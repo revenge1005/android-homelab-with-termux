@@ -10,7 +10,7 @@
 # 목차
 - [01. Termux-app 설치](https://github.com/revenge1005/android-homelab-with-termux/tree/main/01.%20termux-app-install)
 - [02. SSH 설치](https://github.com/revenge1005/android-homelab-with-termux/tree/main/02.%20SSH)
-- [03. ]()
+- [03. Ubuntu 설치]()
 - [04. ]()
 - [05. ]()
 - [06. ]()
