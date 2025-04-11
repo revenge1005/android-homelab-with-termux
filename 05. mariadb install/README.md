@@ -47,3 +47,4 @@ mysqld -u -root&
 mysql -u root -p
 ```
 
+![05-1](https://github.com/revenge1005/android-homelab-with-termux/blob/main/05.%20mariadb%20install/05-1.PNG)
