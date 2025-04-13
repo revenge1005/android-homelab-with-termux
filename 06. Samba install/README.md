@@ -66,7 +66,7 @@ asec    media_rw product sdcard  user
 /dev/block/sdg1: UUID="8C3AF3E33AF3C7EA" TYPE="ntfs"
 ```
 
-### 02. Termux에 HDD(또는 microSD) 마운트 (선택 사항)
+### 02. Termux에 HDD(또는 microSD) 마운트 (선택 사항, 되는 것을 확인하기 위해 작업)
 
 ```bash
 # 루트 권한으로 Termux 홈 디렉토리에서 작업 시작 (su 명령으로 루트 전환 가정)
