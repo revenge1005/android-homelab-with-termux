@@ -166,6 +166,7 @@ apt update
 apt upgrade
 
 # 디렉터리 생성 및 마운트
+root@localhost:/mnt# cd /mnt
 root@localhost:/mnt# mkdir HDD
 root@localhost:/mnt# mkdir microSD
 root@localhost:/mnt# mount -o uid=1000,gid=1000,umask=0000 /dev/block/sdg1 HDD/
