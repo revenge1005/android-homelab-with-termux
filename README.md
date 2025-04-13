@@ -6,6 +6,7 @@
 - **스마트폰**: 안드로이드 7.0 이상 (루팅 선택사항, 비루팅도 가능).
 - **스토리지**: 외장 HDD/SSD 
 - **액세서리**: OTG 어댑터 또는 USB-C 허브 (HDD 연결용).
+
 ![06-1](https://github.com/revenge1005/android-homelab-with-termux/blob/main/06.%20Samba%20install/06-1.jpg)
 
 # 목차
