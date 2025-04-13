@@ -7,4 +7,4 @@
 - Termux에서 `proot-distro login ubuntu` 명령어로 Ubuntu 환경에 접속한 상태로 진행합니다.
 
 ## 준비물
-![06-1]()
+![06-1](https://github.com/revenge1005/android-homelab-with-termux/blob/main/06.%20Samba%20install/06-1.jpg)
