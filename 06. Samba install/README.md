@@ -66,7 +66,7 @@ asec    media_rw product sdcard  user
 /dev/block/sdg1: UUID="8C3AF3E33AF3C7EA" TYPE="ntfs"
 ```
 
-### 02. Termux에 HDD(또는 microSD) 마운트 (선택 사항, 되는 것을 확인하기 위해 작업)
+### 02. Termux에 HDD(또는 microSD) 마운트 
 
 ```bash
 # 루트 권한으로 Termux 홈 디렉토리에서 작업 시작 (su 명령으로 루트 전환 가정)
@@ -164,6 +164,12 @@ usermod -G 3003 -a root
 
 apt update
 apt upgrade
+
+# 디렉터리 생성 및 마운트
+root@localhost:/mnt# mkdir HDD
+root@localhost:/mnt# mkdir microSD
+root@localhost:/mnt# mount -o uid=1000,gid=1000,umask=0000 /dev/block/sdg1 HDD/
+root@localhost:/mnt# mount -o uid=1000,gid=1000,umask=0000 /dev/block/mmcblk0p1 microSD/
 
 # Samba 및 관련 패키지 설치
 root@localhost:/mnt# apt install samba samba-common-bin
