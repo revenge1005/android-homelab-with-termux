@@ -1,16 +1,17 @@
 # Docker Install 
 
-- 이 문서는 Termux 환경에서 Docker(Qemu, Portainer)를 설치 및 설정하는 설명합니다.
+- 이 문서는 Termux 환경에서 QEMU를 사용해 가상 머신을 생성하고, Alpine Linux에 Docker 및 Portainer를 설치하는 과정을 설명합니다.
 
-- (주의) 스마트폰 성능(?)에 따라 설치 시간이 오래 걸린다.
+> "주의: 스마트폰의 성능에 따라 설치 및 실행 시간이 오래 걸릴 수 있습니다."
 
 
 ## 설치 및 설정 단계
 
 
-### 01. Repository 추가 설치
+### 01. 업데이트 및 x11-repo 추가
 
 ```bash
+# Termux의 패키지 목록을 업데이트하고, QEMU 패키지를 설치하기 위해 x11-repo를 추가
 ~ $ pkg update -y && pkg install x11-repo -y
 ```
 
@@ -18,30 +19,43 @@
 ### 02. Qemu 관련 패키지 설치 및 설정
 
 ```bash
+# Docker를 실행하기 위한 가상화 환경을 구성하기 위해 QEMU 관련 패키지를 설치
 ~ $ pkg install qemu-utils qemu-common qemu-system-x86_64-headless wget
+
+# qemu-utils, qemu-common: QEMU 가상화 도구 및 기본 유틸리티.
+# qemu-system-x86_64-headless: 헤드리스(그래픽 인터페이스 없는) x86_64 가상 머신 실행.
+# wget: ISO 파일 다운로드에 사용.
 ```
 
 
 ### 03. 가상 머신에 Alpine Linux OS 설치
 
 ```bash
-~ $ mkdir alpine
+# 작업 디렉토리 생성 및 이동
+~ $ mkdir alpine && cd alpine
 
-~ $ cd alpine
-
+# Alpine Linux ISO 파일 다운로드
 ~/alpine $ wget https://dl-cdn.alpinelinux.org/alpine/v3.20/releases/x86_64/alpine-virt-3.20.3-x86_64.iso
 
+# 가상 디스크 이미지 생성 (10GB)
 ~/alpine $ qemu-img create -f qcow2 alpine.qcow2 10g
 
-~/alpine $ qemu-system-x86_64 -m 1024 -netdev user,id=n1,hostfwd=tcp::2222-:22,hostfwd=tcp::2375-:2375,hostfwd=tcp::9000-:9000,hostfwd=tcp::8888-:8888  -device virtio-net,netdev=n1 -nographic -hda alpine.qcow2 -cdrom alpine-virt-3.12.3-x86_64.iso
+# 가상 머신 실행 및 Alpine Linux 설치
+~/alpine $ qemu-system-x86_64 \
+  -m 1024 \
+  -netdev user,id=n1,hostfwd=tcp::2222-:22,hostfwd=tcp::2375-:2375,hostfwd=tcp::9000-:9000,hostfwd=tcp::8888-:8888 \
+  -device virtio-net,netdev=n1 \
+  -nographic \
+  -hda alpine.qcow2 \
+  -cdrom alpine-virt-3.20.3-x86_64.iso
 ```
 
 
 ### 04. 가상 머신 Alpine Linux OS 설정
 
-```bash
-# 가상머신에 접근 후 작업 (스마트폰 성능(?)에 따라 가상머신이 작동하는 시간이 오래 걸림)
+- 가상 머신이 부팅되면 Alpine Linux를 설정합니다.
 
+```bash
 
 Welcome to Alpine Linux 3.20
 Kernel 6.6.49-0-virt on an x86_64 (/dev/ttyS0)
@@ -177,24 +191,35 @@ Installation is complete. Please reboot.
 alpine:~# poweroff
 alpine:~# ~/alpine $
 
-# 가상머신 실행 (오래 걸림)
-~/alpine $ qemu-system-x86_64 -m 1024 -netdev user,id=n1,hostfwd=tcp::2222-:22,hostfwd=tcp::2375-:2375,hostfwd=tcp::9000-:9000,hostfwd=tcp::8888-:80 -device virtio-net,netdev=n1 -nographic -hda alpine.qcow2 
+# 가상머신 재실행 (오래 걸림)
+~/alpine $ qemu-system-x86_64 \
+  -m 1024 \
+  -netdev user,id=n1,hostfwd=tcp::2222-:22,hostfwd=tcp::2375-:2375,hostfwd=tcp::9000-:9000,hostfwd=tcp::8888-:80 \
+  -device virtio-net,netdev=n1 \
+  -nographic \
+  -hda alpine.qcow2
 ```
 
 
 ### 05. 가상 머신 - Docker 설치
 
 ```bash
+# APK 저장소 수정
 alpine:~# vi /etc/apk/repositories
-# 기존
-#http://dl-cdn.alpinelinux.org/alpine/v3.20/community
-# 변경
 http://dl-cdn.alpinelinux.org/alpine/v3.20/community
 
+# Docker 설치 및 서비스 시작
 alpine:~# apk update && apk add docker docker-compose && rc-update add docker boot && service docker start
 
-# portainer 컨테이너 생성 및 실행 (오래 걸림)
-alpine:~# docker run -d -p 8000:8000 -p 9000:9000 --name=portainer --restart=always -v /var/run/docker.sock:/var/run/docker.sock -v portainer_data:/data portainer/portainer-ce
+# Portainer 컨테이너 실행
+alpine:~# docker run -d \
+  -p 8000:8000 \
+  -p 9000:9000 \
+  --name=portainer \
+  --restart=always \
+  -v /var/run/docker.sock:/var/run/docker.sock \
+  -v portainer_data:/data \
+  portainer/portainer-ce
 ```
 
 
