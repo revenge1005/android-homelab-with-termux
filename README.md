@@ -9,6 +9,8 @@
 - [04. Nginx + PHP 설치](https://github.com/revenge1005/android-homelab-with-termux/tree/main/04.%20Nginx%20%2B%20PHP%20Install)
 - [05. Mariadb 설치](https://github.com/revenge1005/android-homelab-with-termux/tree/main/05.%20mariadb%20install)
 - [06. Samba 설치 (루팅 필요)](https://github.com/revenge1005/android-homelab-with-termux/tree/main/06.%20Samba%20install)
+- [07. Docker 설치](https://github.com/revenge1005/android-homelab-with-termux/tree/main/07.%20Docker%20install)
+- 
 
 ## 준비물
 - **스마트폰**: 안드로이드 7.0 이상 (루팅 선택사항, 비루팅도 가능).
