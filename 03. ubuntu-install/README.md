@@ -48,7 +48,7 @@
 ~ $ proot-distro install ubuntu
 ```
 
-![03-2](https://github.com/revenge1005/android-homelab-with-termux/blob/main/03.%20ubuntu-install/03-2.png)
+![03-2](https://github.com/revenge1005/android-homelab-with-termux/blob/main/03.%20ubuntu-install/03-2.PNG)
 
 ## 04. Ubuntu 로그인
 
@@ -57,7 +57,7 @@
 ~ $ proot-distro login ubuntu
 ```
 
-![03-3](https://github.com/revenge1005/android-homelab-with-termux/blob/main/03.%20ubuntu-install/03-3.PNG)
+![03-3](https://github.com/revenge1005/android-homelab-with-termux/blob/main/03.%20ubuntu-install/03-3.png)
 
 ## 05. Acquire wakelock 설정
 
