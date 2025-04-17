@@ -1,17 +1,17 @@
-# Samba install (루팅 필요)
+# Samba Configuration (루팅 필요)
 
-이 문서는 Termux 환경에서 Samba를 설치하고 초기 설정하여 파일 공유 서비스를 구축하는 방법을 설명합니다.
+이 문서는 Termux의 Box64Droid 환경에서 Samba를 설치하고 초기 설정하여 파일 공유 서비스를 구축하는 방법을 설명합니다.
 
-
-## 선행 작업
+## 01. 선행 작업
 - (필수) 스마트폰이 루팅되어 있어야 합니다.
 
-## 준비물
+## 02. 준비물
+
 ![06-1](https://github.com/revenge1005/android-homelab-with-termux/blob/main/06.%20Samba%20install/06-1.jpg)
 
-## 설치 및 설정 단계
+## 03. Termux 스토리지(내부 및 외부) 설정 
 
-### 01. Termux 스토리지(내부 및 외부) 설정 및 확인
+### 1. Termux 스토리지(내부 및 외부) 설정 및 확인
 
 ```bash
 # 내부 및 외부 저장소에 접근할 수 있도록 권한을 설정하고 디렉토리를 생성하는 명령어
@@ -66,7 +66,7 @@ asec    media_rw product sdcard  user
 /dev/block/sdg1: UUID="8C3AF3E33AF3C7EA" TYPE="ntfs"
 ```
 
-### 02. Termux에 HDD(또는 microSD) 마운트 
+### 2. Termux에 HDD(또는 microSD) 마운트 
 
 ```bash
 # 루트 권한으로 Termux 홈 디렉토리에서 작업 시작 (su 명령으로 루트 전환 가정)
@@ -102,9 +102,9 @@ storage
 HDD  microSD  storage
 ```
 
-### 03. Chroot 환경을 설정하여 SAMBA 서버를 구성
+## 04. Box64Droid 환경에서 SAMBA 서버를 구성
 
-- 참고 문서: Termux에서 Chroot 설치 가이드
+- 참고 문서: Termux에서 Box64Droid 설치 가이드
 - 링크: https://github.com/LinuxDroidMaster/Termux-Desktops/blob/main/Documentation/chroot/box64droid_chroot.md
 
 ```bash
