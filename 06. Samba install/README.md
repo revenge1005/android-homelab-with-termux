@@ -9,7 +9,28 @@
 
 ![06-1](https://github.com/revenge1005/android-homelab-with-termux/blob/main/06.%20Samba%20install/06-1.jpg)
 
-## 03. Termux에서 스토리지(내부 및 외부) 마운트
+## 03. Termux에서 패키지 저장소 서버(미러) 변경 및 추가
+
+```bash
+~ $ termux-change-repo
+```
+
+![02-1](https://github.com/revenge1005/android-homelab-with-termux/blob/main/02.%20SSH/02-1.png)
+
+```bash
+# 루트 권한과 관련된 패키지 저장소 추가
+~ $ pkg install root-repo -y
+
+# X11(그래픽 환경) 관련 패키지 저장소 추가
+~ $ pkg install x11-repo -y
+
+# 저장소의 최신 패키지 목록을 받아고, 설치된 패키지들을 실제로 최신 버전으로 업그레이드
+~ $ pkg update -y && pkg upgrade -y
+```
+
+![02-2](https://github.com/revenge1005/android-homelab-with-termux/blob/main/02.%20SSH/02-2.png)
+
+## 04. Termux에서 스토리지(내부 및 외부) 마운트
 
 ### 1. Termux 스토리지(내부 및 외부) 설정 및 확인
 
@@ -102,7 +123,7 @@ storage
 HDD  microSD  storage
 ```
 
-## 04. Box64Droid 환경에서 SAMBA 서버를 구성
+## 05. Box64Droid 환경에서 SAMBA 서버를 구성
 
 - 참고 문서: Termux에서 Box64Droid 설치 가이드
 - 링크: https://github.com/LinuxDroidMaster/Termux-Desktops/blob/main/Documentation/chroot/box64droid_chroot.md
@@ -201,7 +222,7 @@ Added user root.
 root@localhost:/mnt# smbd
 ```
 
-### 04. Samba 서버 연결
+### 06. Samba 서버 연결
 
 ![06-2](https://github.com/revenge1005/android-homelab-with-termux/blob/main/06.%20Samba%20install/06-2.png)
 
