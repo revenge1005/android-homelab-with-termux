@@ -9,7 +9,7 @@
 
 ![06-1](https://github.com/revenge1005/android-homelab-with-termux/blob/main/06.%20Samba%20install/06-1.jpg)
 
-## 03. Termux 스토리지(내부 및 외부) 설정 
+## 03. Termux에서 스토리지(내부 및 외부) 마운트
 
 ### 1. Termux 스토리지(내부 및 외부) 설정 및 확인
 
