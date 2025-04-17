@@ -1,6 +1,6 @@
 # SSH Server Configuration
 
-## 01. Termux에서 패키지 저장소 서버(미러) 변경
+## 01. Termux에서 패키지 저장소 서버(미러) 변경 및 추가
 
 ```bash
 ~ $ termux-change-repo
