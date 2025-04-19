@@ -205,7 +205,7 @@ root@localhost:~# apache2ctl start && /usr/sbin/php-fpm8.3 -D
 
 ![08-8](https://github.com/revenge1005/android-homelab-with-termux/blob/main/08.%20NextCloud%20install/08-8.png)
 
-- 웹 브라우저에서 해당 파일을 확인하려면 다음 작업 중 하나를 수행해야 합니다.
+- 웹 브라우저에서 해당 파일을 확인하려면 다음 작업을 수행해야 합니다.
 
 ```bash
 php /var/www/nextcloud/occ files:scan --all
