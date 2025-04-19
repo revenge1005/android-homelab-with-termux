@@ -194,3 +194,25 @@ root@localhost:~# apache2ctl start && /usr/sbin/php-fpm8.3 -D
 
 ## 03. 번외
 
+- NextCloud의 사용자별 디렉터리는 '/var/www/nextcloud/data/'에 저장되어 있습니다.
+
+![08-6](https://github.com/revenge1005/android-homelab-with-termux/blob/main/08.%20NextCloud%20install/08-6.png)
+
+![08-7](https://github.com/revenge1005/android-homelab-with-termux/blob/main/08.%20NextCloud%20install/08-7.png)
+
+- 서버 생성한 파일을 NextCloud를 통해 옮기려고 할 때 다음과 같이 수행해야 합니다.
+- 먼저 옮기려는 파일을 사용자별 디렉터리에 옮깁니다. '/var/www/nextcloud/data/(사용자계정명)/file'
+
+![08-8](https://github.com/revenge1005/android-homelab-with-termux/blob/main/08.%20NextCloud%20install/08-8.png)
+
+- 웹 브라우저에서 해당 파일을 확인하려면 다음 작업 중 하나를 수행해야 합니다.
+
+```bash
+php /var/www/nextcloud/occ files:scan --all
+```
+
+![08-9](https://github.com/revenge1005/android-homelab-with-termux/blob/main/08.%20NextCloud%20install/08-9.png)
+
+- 웹 브라우저에서 확인.
+
+![08-10](https://github.com/revenge1005/android-homelab-with-termux/blob/main/08.%20NextCloud%20install/08-10.png)
