@@ -10,6 +10,7 @@
 - [05. Mariadb 설치](https://github.com/revenge1005/android-homelab-with-termux/tree/main/05.%20mariadb%20install)
 - [06. Samba(Box64Droid 환경) 설치 (루팅 필요)](https://github.com/revenge1005/android-homelab-with-termux/tree/main/06.%20Samba%20install)
 - [07. Docker 설치](https://github.com/revenge1005/android-homelab-with-termux/tree/main/07.%20Docker%20install)
+- [08. NextCloud(proot 환경) 설치]()
 - 
 
 ## 준비물
