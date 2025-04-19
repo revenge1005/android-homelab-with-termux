@@ -176,21 +176,21 @@ root@localhost:~# apache2ctl start && /usr/sbin/php-fpm8.3 -D
 
 - 관리자 계정 및 데이터베이스 연결 정보를 구성
 
-![08-1]()
+![08-1](https://github.com/revenge1005/android-homelab-with-termux/blob/main/08.%20NextCloud%20install/08-1.png)
 
 - NextCloud 추천 애플리케이션을 설치할지 여부를 선택
 
-![08-2]()
+![08-2](https://github.com/revenge1005/android-homelab-with-termux/blob/main/08.%20NextCloud%20install/08-2.png)
 
 - 시작 페이지가 표시
 
-![08-3]()
+![08-3](https://github.com/revenge1005/android-homelab-with-termux/blob/main/08.%20NextCloud%20install/08-3.png)
 
 - 설치가 완료된 후에는 URL로 NextCloud에 액세스할 수 있습니다.
 
-![08-4]()
+![08-4](https://github.com/revenge1005/android-homelab-with-termux/blob/main/08.%20NextCloud%20install/08-4.png)
 
-![08-5]()
+![08-5](https://github.com/revenge1005/android-homelab-with-termux/blob/main/08.%20NextCloud%20install/08-5.png)
 
 ## 03. 번외
 
