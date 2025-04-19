@@ -134,7 +134,7 @@ MariaDB [(none)]> exit
 # NextCloud 설치, 시간이 오래 걸린다면,
 root@localhost:~# wget https://download.nextcloud.com/server/releases/latest.zip -P /var/www/
 
-# axel 명령 사용하면 조금더 빠르게 설치된다. (wget이 2시간 걸리면, axel은 1시간 정도)
+# axel 명령 사용하면 조금더 빠르게 설치된다.
 root@localhost:~# axel https://download.nextcloud.com/server/releases/latest.zip
 root@localhost:~# mv latest.zip /var/www/
 
@@ -146,7 +146,7 @@ ProxyTimeout 3600
 DirectoryIndex index.php index.html
 Header set Strict-Transport-Security "max-age=15768000; includeSubDomains; preload"
 
-<VirtualHost *:80>
+<VirtualHost *:8080>
     DocumentRoot /var/www/nextcloud
 </VirtualHost>
 
